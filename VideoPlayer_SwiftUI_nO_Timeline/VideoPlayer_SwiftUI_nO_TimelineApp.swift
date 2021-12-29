@@ -11,7 +11,7 @@ import SwiftUI
 struct VideoPlayer_SwiftUI_nO_TimelineApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(loopingPlayerUIView: LoopingPlayerUIView())
         }
     }
 }
