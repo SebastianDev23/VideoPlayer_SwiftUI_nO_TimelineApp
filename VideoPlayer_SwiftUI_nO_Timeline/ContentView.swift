@@ -5,6 +5,7 @@
 import SwiftUI
 import Foundation
 import AVKit
+import AVFoundation
 
 struct ContentView: View {
     
@@ -23,14 +24,14 @@ struct ContentView: View {
             
             
             Button("Play") {
-                loopingPlayerUIView.playerLayer.player?.play()
+               playerLayer.player?.play()
                 print("Play")
             }
             
             .padding(50)
             
             Button("Stop") {
-                loopingPlayerUIView.playerLayer.player?.pause()
+         playerLayer.player?.pause()
                 print("Stop")
                 
             }
@@ -41,7 +42,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-      ContentView(loopingPlayerUIView: LoopingPlayerUIView())
+        ContentView(loopingPlayerUIView: LoopingPlayerUIView())
+        
         
     }
 }

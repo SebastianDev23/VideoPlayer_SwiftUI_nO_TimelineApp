@@ -3,10 +3,11 @@ import SwiftUI
 import AVKit
 import AVFoundation
 
+let playerLayer = AVPlayerLayer()
 
 class LoopingPlayerUIView: UIView, ObservableObject {
 
-    let playerLayer = AVPlayerLayer()
+
     var playerLooper: AVPlayerLooper?
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -30,8 +31,7 @@ class LoopingPlayerUIView: UIView, ObservableObject {
         playerLooper = AVPlayerLooper(player: player, templateItem: item)
         
         // Start the movie
-
-      
+        
     }
   
     override func layoutSubviews() {
@@ -46,5 +46,9 @@ struct PlayerView: UIViewRepresentable {
         return LoopingPlayerUIView(frame: .zero)
     }
 }
+
+
+
+
 
 
