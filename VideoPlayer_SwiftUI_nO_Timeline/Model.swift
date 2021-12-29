@@ -4,11 +4,13 @@ import AVKit
 import AVFoundation
 
 let playerLayer = AVPlayerLayer()
+var playerLooper: AVPlayerLooper?
 
 class LoopingPlayerUIView: UIView, ObservableObject {
 
 
-    var playerLooper: AVPlayerLooper?
+  
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
